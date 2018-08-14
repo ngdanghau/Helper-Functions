@@ -38,3 +38,8 @@ function truncate_string($string = "", $max_length = 50, $ellipsis = "...", $tri
 
     return $string;
 }
+        
+/*
+echo truncate_string('Mark Zuckerberg',7);
+=> Mark...
+*/ 
