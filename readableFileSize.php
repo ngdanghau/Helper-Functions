@@ -31,3 +31,24 @@ function readableFileSize($size, $precision = 2) {
 echo readableFileSize('1205012725');
 => 1.12GB
 */
+        
+        
+        
+        
+/**
+ * Convert numbers to human readable formats (Ex: 3K, 3.4M)
+ * @param  integer $numbers Number to convert
+ * @return string          
+ */
+function readableNumber($numbers, $precision = 2)
+{
+   $readable = ["",  "K", "M", "B"];
+   $index = 0;
+
+   while($numbers > 1000){
+      $numbers /= 1000;
+      $index++;
+   }
+
+   return round($numbers, $precision) ." ". $readable[$index];
+}
